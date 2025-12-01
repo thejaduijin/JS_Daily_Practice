@@ -50,7 +50,6 @@ function findLargest(arr) {
 function findSecondLargest(arr) {
     let largest = arr[0];
     let secondLargest = -1;
-    let temp;
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] > largest) {
             secondLargest = largest;
@@ -62,3 +61,22 @@ function findSecondLargest(arr) {
     return secondLargest;
 }
 console.log(findSecondLargest(arr2));
+
+
+// sort an array
+const arr3 = [5, 10, 2, 1, 9];
+
+function sortedArr(arr) {
+    let temp;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] > arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
+console.log(sortedArr(arr3));
